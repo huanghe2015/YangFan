@@ -1,0 +1,3 @@
+<div class="col-md-12 column" id="page_content"><!--在此处插入页面正文内容-->
+    <img src="资源库/图片/封三—《扬帆简介》.jpg" class="img-responsive center-block">
+</div>

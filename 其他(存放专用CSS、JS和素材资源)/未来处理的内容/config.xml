@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<website>
+    <authority>
+        <username id="username">admin</username>
+        <password id="password">21232f297a57a5a743894a0e4a801fc3</password><!--密码使用MD5加密存储-->
+        <cookie>admin</cookie><!--存储登陆成功后的Cookie内容(使用MD5加密)-->
+    </authority>
+    <resources>
+        <images>
+
+        </images>
+        <music>
+
+        </music>
+    </resources>
+    <pages>
+        <model name="模板">layout.html</model>
+        <detials>
+            <page>index.html</page>
+            <page>content1.html</page>
+        </detials>
+    </pages>
+</website>

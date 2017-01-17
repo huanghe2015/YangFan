@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="author" content="AK103">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- JS -->
+	<script src="../框架/js/jquery.min.js"></script>
+	<script src="../框架/js/bootstrap.min.js"></script>
+	<script src="../框架/js/script.js"></script>
+	<script>
+		var listUsername,listPassword;
+		function validate () {
+			$.ajax (
+					{
+						url:'config.xml',
+						type:'GET',
+						datatype:'xml',
+						success:function readValue(){
+							listUsername= $.children('');
+							listPassword=$(this ).getElementsByTagName('password')[0 ].nodeValue;
+						}
+					}
+			);
+			alert(listUsername+","+listPassword);
+		}
+	</script>
+	<!-- CSS -->
+	<link href="../框架/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../框架/css/layout.css" rel="stylesheet">
+</head>
+<body oncontextmenu="return false" onselect="return false">
+<!-- Top content -->
+<div class="top-content">
+	<div class="inner-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text">
+					<h1 class="text-center text-success">《扬帆》杂志内容管理登录</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3 form-box">
+					<div class="form-top">
+						<div class="form-top-left">
+							<h3>登录</h3>
+						</div>
+						<div class="form-top-right">
+							<i class="fa fa-key"></i>
+						</div>
+					</div>
+					<div class="form-bottom">
+						<form role="form" class="login-form" action="#" method="post">
+							<div class="form-group">
+								<label class="sr-only" for="form_username">用户名：</label>
+								<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form_username">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="form_password">密码：</label>
+								<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form_password">
+							</div>
+							<button type="submit" class="btn" onclick="validate()">Sign in!</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<footer class="row">
+				<div class="col-md-12 column">
+					<address>
+						<strong>版权所有</strong>
+						<br/>作者：AK103
+						<br/>日期：2016年9月26日
+						<br/>浏览器支持：火狐、谷歌等。推荐使用世界之窗。
+					</address>
+				</div>
+			</footer>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+#editor {
+	overflow: scroll;
+}
+
+.bgm{
+	-webkit-animation:circle 1s infinite linear;/*匀速 循环*/
+	-moz-animation:circle 1s infinite linear;
+	-ms-animation:circle 1s infinite linear;
+	-o-animation:circle 1s infinite linear;
+	animation: circle 1s infinite linear;
+}
+
+@-webkit-keyframes circle {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
